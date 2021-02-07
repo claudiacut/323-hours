@@ -235,7 +235,7 @@ a:focus {
 	grid-area: title;
 	font-family: 'nexa_boldregular', sans-serif;
 	letter-spacing: -0.025em;
-	font-size: 7em;
+	font-size: 12em !important;
 	line-height: 160px;
 	margin: 0;
 	text-transform: lowercase;
@@ -270,12 +270,13 @@ a:focus {
 }
 
 .content__link {
+	font-size: 1.5em;
 	pointer-events: auto;
 	grid-area: link;
 	align-self: end;
 	justify-self: start;
 	z-index: 10;
-	padding: 1em 1em 0.15em;
+	padding: 2em 1em 0.15em;
 }
 
 .content__info {
