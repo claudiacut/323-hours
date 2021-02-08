@@ -1,164 +1,190 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Morphing Background Shapes | Demo 3 | Codrops</title>
-		<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
-		<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
-		<script>
-			document.documentElement.className = 'js';
-			var supportsCssVars = function() {
-				var s = document.createElement('style'),
-				support;
 
-				s.innerHTML = "root: { --tmp-var: bold; }";
-				document.head.appendChild(s);
-				support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
-				s.parentNode.removeChild(s);
-				return support;
-			}
-			if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
-		</script>
-	</head>
-	<body class="demo-3 loading">
-		<svg class="hidden">
-			<symbol id="icon-arrow" viewBox="0 0 24 24">
-				<title>arrow</title>
-				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-			</symbol>
-			<symbol id="icon-drop" viewBox="0 0 24 24">
-				<title>drop</title>
-				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-			</symbol>
-			<symbol id="shape-demo" viewBox="0 0 200 100">
-				<title>shape demo</title>
-				<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
-			</symbol>
-		</svg>
-		<main>
-			<div class="morph-wrap">
-				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
-					<polygon points="700,84.4 1047.1,685.6 352.9,685.6 352.9,685.6 352.9,685.6 352.9,685.6"/>
-				</svg>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>323 hours</title>
+
+	<link rel="icon" type="image/png" href="ico/favicon.jpg">
+	<link rel="apple-touch-icon" href="ico/pple-touch-icon.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="ico/apple-touch-icon-72x72.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.jpg">
+
+	<link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.typekit.net/eqx3jwb.css">
+	<link rel="stylesheet" type="text/css" href="css/landing.css">
+
+
+	<script>
+		document.documentElement.className = "js";
+
+		var supportsCssVars = function supportsCssVars() {
+			var e,
+				t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+		};
+
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+	<style class="back">
+
+	body {
+		background-color: #56cccf;
+	}
+
+	</style>
+</head>
+
+<body class="demo-1 loading" style="background-color:#56cccf;">
+	<main>
+		<div class="message">pls 1920 x 1080 view</div>
+
+		<!-- IMMAGINI FLUTTUANTI -->
+		<div id="content" class="content">
+
+
+			<div class="grid grid--img">
+
+
+				<div id="lol" class="grid__item pos-1">
+					<div class="grid__item-img"></div>
+				</div>
+				<div id="nope" class="grid__item pos-1 effect-1">
+					<div class="grid__item-img effect-1" style="background-image:url(https://i.ibb.co/KhqvJkM/peppaok-5.gif);"></div>
+				</div>
+
+
+				<div id="lol2" class="grid__item pos-2">
+					<div class="grid__item-img effect"><img src="/img/book.png" style="width:54%;"></div>
+				</div>
+				<div id="nope2" class="grid__item pos-2 effect-1">
+					<div class="grid__item-img effect-1"></div>
+				</div>
+
+
+				<div id="lol3" class="grid__item pos-3">
+					<div class="grid__item-img effect"><img src="/img/cup.png" style="width:54%;"></div>
+				</div>
+				<div id="nope3" class="grid__item pos-3 effect-1">
+					<div class="grid__item-img effect-1"><img src="/img/cup.png" style="width:54%;"></div>
+				</div>
+
+				<div id="lol4" class="grid__item pos-4">
+					<div class="grid__item-img effect"><img src="/img/book.png" style="width:54%;"></div>
+				</div>
+				<div id="nope4" class="grid__item pos-4 effect-1">
+					<div class="grid__item-img effect-1"><img src="/img/book.png" style="width:50%;"></div>
+				</div>
+
+
+				<div id="lol5" class="grid__item pos-5">
+					<div class="grid__item-img effect"></div>
+				</div>
+				<div id="nope5" class="grid__item pos-5 effect-1">
+					<div class="grid__item-img effect-1"><img src="/img/trip.png" style="width:50%;"></div>
+				</div>
+
+				<div id="lol6" class="grid__item pos-6">
+					<div class="grid__item-img effect"></div>
+				</div>
+				<div id="nope6" class="grid__item pos-6 effect-1">
+					<div class="grid__item-img effect-1"></div>
+				</div>
+
+				<div id="lol7" class="grid__item pos-7">
+					<div class="grid__item-img effect"></div>
+				</div>
+				<div id="nope7" class="grid__item pos-7 effect-1">
+					<div class="grid__item-img effect-1"><img src="/img/music.png" style="width:54%;"></div>
+				</div>
+
+				<div id="lol8" class="grid__item pos-8">
+					<div class="grid__item-img effect"></div>
+				</div>
+				<div id="nope8" class="grid__item pos-8 effect-1">
+					<div class="grid__item-img effect-1"></div>
+				</div>
+
+				<div id="lol9" class="grid__item pos-9">
+					<div class="grid__item-img effect" style="background-image:url(https://i.ibb.co/3CCzhBS/mine-1.gif);"></div>
+				</div>
+				<div id="nope9" class="grid__item pos-9 effect-1">
+					<div class="grid__item-img effect-1" style="background-image:url(https://i.ibb.co/9phJhXd/mineok-1.gif);"></div>
+				</div>
+
+				<div id="lol10" class="grid__item pos-10">
+					<div class="grid__item-img effect"></div>
+				</div>
+				<div id="nope10" class="grid__item pos-10 effect-1">
+					<div class="grid__item-img effect-1" style="background-image:url(https://i.ibb.co/QDXM7h5/elsaok-1.gif);"></div>
+				</div>
+
+
+				<div id="lol11" class="grid__item pos-11">
+					<div  class="grid__item-img effect" style="background-image:url(https://i.ibb.co/QCVCVQ7/spider-3.gif);"></div>
+				</div>
+				<div id="nope11" class="grid__item pos-11 effect-1">
+					<div class="grid__item-img effect-1"></div>
+				</div>
+
+				<div id="lol12" class="grid__item pos-12">
+					<div  class="grid__item-img effect"></div>
+				</div>
+				<div id="nope12" class="grid__item pos-12 effect-1">
+					<div class="grid__item-img effect-1"></div>
+				</div>
+
 			</div>
-			<div class="content content--fixed">
-				<header class="codrops-header">
 
-					<div class="codrops-links">
+			<audio id="right">
+		         <source src="interference.wav">
+		     </audio>
 
-						<svg class="decoshape" viewBox="0 0 200 100" width="100%" height="100%" preserveAspectRatio="none">
-							<path d="M 10.45,74.41 C 39.4,110.8 72.59,67.27 95.98,68.68 122.3,70.35 131.5,101.4 154.7,99.69 177.9,98.03 200.5,79.26 198.1,47.17 195.9,15.27 174.6,-0.3279 151.8,0.9941 128.6,2.581 126,16.86 107,22.76 88.26,28.67 88.87,12.36 60.37,1.787 31.79,-8.877 -18.61,37.92 10.45,74.41 Z" />
-						</svg>
+<!-- non so perchè ma se c'è il div attorno non riesco a prendere l'id da js -->
+				   <div id="title-par" class="align-self-center flex-column">
+				 			<h2 id="title" class="content__title font-wide justify-content-center align-self-center">
+				 				<!-- <span class="content__title-sub">enter</span> -->
+				 				<!-- <a href="home.html" class="content__title-sub">enter</a> -->
+				 		<a href="home.html" class="content__title-sub font-wide justify-content-center align-self-center" style="z-index:2000;">323 HOURS</a>
+				 	</h2>
+				 	</div>
 
+<!-- DIV LEVETTA + ON / OFF -->
+
+					<div id="switch" class="align-self-center flex-column">
+						<label class="switch flex-colums align-self-center">
+					 		<input id="switch_id" type="checkbox" >
+					 		<span class=" hover-target slider round" style="display: none;"></span>
+					 	</label>
+							</div>
+					 	<h1 class=" align-self-center justify-content-center flex-column label content__title no-select" style="display: none;">
+					 		<span id="on" class="font-wide align-self-center justify-content-center pt-3 landingpos" style="display: none;">autoplay ON</span>
+					 		<span id="off" class="font-wide align-self-center justify-content-center pt-3 landingpos" style="display: none;">autoplay OFF</span>
+					 	</h1>
+
+
+<!-- DIV STICKER -->
+
+					<div id="enter" class=" justify-content-center align-self-center">
+						<a href="home.html" ><img class="justify-content-right align-self-center stickerhome" src="img/enter.svg"></a>
 					</div>
 
-				</header>
-
-				<a class="pater" href="http://synd.co/2pHxJny">
-		<svg class="pater__deco" width="300" height="240" viewBox="0 0 1000 800">
-			<path d="M27.4,171.8C73,42.9,128.6,1,128.6,1s0,0,0,0c58.5,0,368.3,0.3,873.2,0.8c38.5,211,42.1,373.5,38.9,476.7c-2.5,80.3-10.6,174.9-76.7,247.8c-15.1,16.6-37.4,41.2-72.8,53.9c-92.4,33.1-173-50.8-283.9-99.4c-224.3-98.4-334.9,51.4-472.2-45.6C-6.3,535.2-14.5,290.6,27.4,171.8z"/>
-		</svg>
-		<a href="combinations.html">	<h6 class="pater__title">about</h6> </a>
-
-		<h6 class="pater__title">Credits</h6>
-		<br>
-					 <p class="pater__desc">Final Synthesis<br> Design Studio - Infopoetry <br> a project by @claudiacut</p>
-	</a>
-				<div class="deco deco--title">323 hours</div>
 
 
-			</div>
+			<!-- Rounded switch -->
 
-				<div class="position" id="shuffle">
-		<!--		<div class="button" id="shuffle"> <p>Shuffle</p></div> -->
-				<input type="button" onclick="getItem()" value="shuffle"/>
-		</div>
+	</div>
+</div>
+	</main>
+	<svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+		<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
+	</svg>
+	<script src="js/landing1.js"></script>
 
-			<div class="content-wrap caso" id="1">
-				<div class="content content--layout content--layout-1">
-			<img class="content__img" src="img/trip.png" alt="Some image" />
-			<h4 class="content__desc">watch Lord of the Rings Trilogy (extended versions)</h4>
-					<h1 class="content__title">26,91 times</h1>
-		<!--			<p class="content__author">Walter Mastricht</p> -->
-				<br>
-					<a href="#" class="content__link">Film&Series</a>
-				</div>
-			</div>
-			<div class="content-wrap caso" id="2">
-				<div class="content content--layout content--layout-2">
-					<img class="content__img" src="img/5.jpg" alt="Some image" />
-					<h3 class="content__title">bunch</h3>
-			<!--		<p class="content__author">Nikimo Westlane</p> -->
-					<p class="content__desc">The neverending quest, once and forever.</p>
-					<a href="#" class="content__link">Discover</a>
-				</div>
-			</div>
-			<div class="content-wrap caso" id="3">
-				<div class="content content--layout content--layout-3">
-					<img class="content__img" src="img/3.jpg" alt="Some image" />
-					<h3 class="content__title">found</h3>
-			<!--		<p class="content__author">Jane Westhall</p> -->
-					<p class="content__desc">Lost or found? That's the question today.</p>
-					<a href="#" class="content__link">Discover</a>
-				</div>
-			</div>
-	<!--		<div class="content-wrap">
-				<div class="content content--layout content--layout-4">
-					<img class="content__img" src="img/4.jpg" alt="Some image" />
-					<h3 class="content__title">frank</h3>
-					<p class="content__author">Frank Cherry</p>
-					<p class="content__desc">Frank's work and nothing more.</p>
-					<a href="#" class="content__link">Discover</a>
-				</div>
-			</div>
-			<div class="content-wrap">
-				<div class="content content--layout content--layout-1">
-					<img class="content__img" src="img/1.jpg" alt="Some image" />
-					<h3 class="content__title">revert</h3>
-					<p class="content__author">Gregory Mourisha</p>
-					<p class="content__desc">Finding the heart when paradise is lost.</p>
-					<a href="#" class="content__link">Discover</a>
-				</div>
-			</div> -->
-			<!-- Related demos -->
-			<section class="content content--related">
-		<!--		<p class="content__info">If you enjoyed this demo you might also like:</p>
-				<a class="content__related-item" href="https://tympanus.net/Development/ElasticSVGElements/">
-					<img class="content__related-img" src="img/related/ItemRevealer.jpg">
-					<h3 class="content__related-title">Elastic SVG Elements</h3>
-				</a>
-				<a class="content__related-item" href="https://tympanus.net/Development/ItemRevealer/">
-					<img class="content__related-img" src="img/related/ElasticSVGElements.jpg">
-					<h3 class="content__related-title">Item Revealer</h3>
-				</a> -->
-			</section>
-		</main>
-		<script src="p5.min.js"></script>
-	 <script src="p5.sound.min.js"></script>
-	 <script src="jquery-3.5.1.min.js"></script>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/anime.min.js"></script>
-		<script src="js/scrollMonitor.js"></script>
-		<script src="js/demo3.js"></script>
-		<script src="js/random.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script>
-	<script src="https://d3js.org/d3.v6.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.14.0/js-yaml.min.js" integrity="sha512-ia9gcZkLHA+lkNST5XlseHz/No5++YBneMsDp1IZRJSbi1YqQvBeskJuG1kR+PH1w7E0bFgEZegcj0EwpXQnww==" crossorigin="anonymous"></script>
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script src="extensions/filter-control/bootstrap-table-filter-control.js"></script>
-	</body>
+</body>
+
 </html>
