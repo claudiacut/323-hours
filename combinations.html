@@ -17,77 +17,141 @@
 		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
 
 	</head>
+	<style>
+.filterDiv {
+  float: left;
+	border: 2px solid white;
+  color: #ffffff;
+  width: 100%;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
 	<body style="background-color:#56cccf;">
 
+		<header class="header space2">
+			<div class="header-wrapper">
+				<div class="nav-but-wrap">
+					<a href="index.html" class="hover-target animsition-link padding-element-l">
+						<h4>323 hours</h4>
+					</a>
+					<a href="" class=" roba hover-target animsition-link padding-element">
+						<h4>Credits</h4>
+					</a>
+					<a href="about.html" class=" roba hover-target animsition-link padding-element">
+						<h4>About</h4>
+					</a>
+					<a href="combinations.html" class=" roba hover-target animsition-link padding-element">
+						<h4>All combinations</h4>
+					</a>
+					<div class="menu-icon hover-target">
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <div class="container">
+<div class="container space">
+		<div id="myBtnContainer">
+		  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+		  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+		  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+		  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+		  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+		</div>
 
-		<div class="col-12">
+		<div class="container space2">
+		  <div class="filterDiv cars">BMW</div>
+		  <div class="filterDiv colors fruits">Orange</div>
+		  <div class="filterDiv cars">Volvo</div>
+		  <div class="filterDiv colors">Red</div>
+		  <div class="filterDiv cars animals">Mustang</div>
+		  <div class="filterDiv colors">Blue</div>
+		  <div class="filterDiv animals">Cat</div>
+		  <div class="filterDiv animals">Dog</div>
+		  <div class="filterDiv fruits">Melon</div>
+		  <div class="filterDiv fruits animals">Kiwi</div>
+		  <div class="filterDiv fruits">Banana</div>
+		  <div class="filterDiv fruits">Lemon</div>
+		  <div class="filterDiv animals">Cow</div>
+		</div>
 
-
-								<div class="ui-group align-self-center">
-
-									<div class="button-group js-radio-button-group dim1" data-filter-group="shape">
-										<button class="button is-checked" data-filter="">all</button>
-										<button class="button hover-target" data-filter=".tv">Tv&Series</button>
-										<button class="button hover-target" data-filter=".books">Books</button>
-										<button class="button hover-target" data-filter=".travel">Travel</button>
-										<button class="button b-big hover-target" data-filter=".cooking">Cooking</button>
-										<button class="button hover-target" data-filter=".music">Music</button>
-
-
-									</div>
-								</div>
-							</div>
-							<div class="grid col-12">
-
-	<div class="color-shape tv">
-		<div class="margin">
-<div class="row">aaa</div>
-	 </div>
-	 </div>
-	 <div class="color-shape music">
- 		<div class="margin">
- <div class="row">bbb</div>
- 	 </div>
- 	 </div>
-
-
-						</div>
-
-	</div>
-
-	<!--	<div class="margin">
-		<table class="table">
-	  <thead>
-	    <tr>
-	      <th scope="col">category</th>
-	      <th scope="col">action</th>
-	      <th scope="col">time</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <th scope="row"><img class="content__img-t" src="img/trip.png"></th>
-	      <td>Mark</td>
-	      <td>Otto</td>
-	    </tr>
-	    <tr>
-	      <th scope="row" class="space">2</th>
-	      <td class="space">Jacob</td>
-	      <td class="space">Thornton</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">3</th>
-	      <td>Larry</td>
-	      <td>the Bird</td>
-	    </tr>
-	  </tbody>
-	</table>
-  </div>
-	</div>
--->
+</div>
 </body>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
 		<script src="p5.min.js"></script>
 	 <script src="p5.sound.min.js"></script>
 	 <script src="jquery-3.5.1.min.js"></script>
@@ -96,7 +160,7 @@
 		<script src="js/scrollMonitor.js"></script>
 		<script src="js/demo3.js"></script>
 		<script src="js/random.js"></script>
-		<script src="js/archive.js"></script>
+	<!--	<script src="js/archive.js"></script> -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script>
 	<script src="https://d3js.org/d3.v6.min.js"></script>
