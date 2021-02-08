@@ -426,6 +426,16 @@ input:checked+.slider:before {
   z-index: 2000;
 }
 
+.content__subtitle {
+  font-size: 1.3em;
+  font-family: 'nexa_boldregular';
+  margin-bottom: 0;
+  line-height: 1.35;
+  color: white;
+  text-align: center;
+  z-index: 2000;
+}
+
 a.content__title-sub {
   font-size: 110px;
   text-transform: uppercase;
