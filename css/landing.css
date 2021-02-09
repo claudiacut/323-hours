@@ -288,10 +288,24 @@ body {
 }
 
 .stickerhome {
-  width: 70%;
+  background-color: white;
+	border: none;
+  color: #56CCCF;
+  text-align: center;
+  font-family: 'nexa_boldregular', sans-serif;
+  height: 50px;
+	width: 90px;
+  font-size: 26px;
+	border-radius: 9px;
   margin-top: 15%;
   margin-left: 15%;
   animation: leaves 1s ease-in-out infinite alternate;
+}
+
+.stickerhome:hover {
+  background-color: #E6E948;
+  border: none;
+  color: white;
 }
 
 @keyframes leaves {
