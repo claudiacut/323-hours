@@ -6,11 +6,11 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Morphing Background Shapes | Demo 3 | Codrops</title>
+		<title>323 hours</title>
 		<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
 		<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
 		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="/img/time.png">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -27,6 +27,7 @@
   text-align: center;
   margin: 2px;
   display: none;
+	font-size: medium;
 }
 
 .show {
@@ -43,17 +44,25 @@
   border: none;
   outline: none;
   padding: 12px 16px;
-  background-color: #f1f1f1;
+	margin-right: 8.43em;
+	background-color: white;
+	border: none;
+	color: #56CCCF;
   cursor: pointer;
+	font-family: 'nexa_boldregular', sans-serif;
+	font-size: 1.5em;
 }
 
 .btn:hover {
-  background-color: #ddd;
+	background-color: #E6E948;
+	border: none;
+	color: white;
 }
 
 .btn.active {
-  background-color: #666;
-  color: white;
+	background-color: #E6E948;
+	border: none;
+	color: white;
 }
 </style>
 	<body style="background-color:#56cccf;">
@@ -79,26 +88,27 @@
 <div class="container space">
 		<div id="myBtnContainer">
 		  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-		  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-		  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-		  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-		  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+		  <button class="btn" onclick="filterSelection('movies')"> Movies&Series</button>
+		  <button class="btn" onclick="filterSelection('books')"> Books</button>
+		  <button class="btn" onclick="filterSelection('trips')"> Trips</button>
+		  <button class="btn" onclick="filterSelection('music')"> Music</button>
+			<button class="btn" onclick="filterSelection('cook')"> Cooking</button>
 		</div>
 
 		<div class="container space2">
-		  <div class="filterDiv cars">BMW</div>
-		  <div class="filterDiv colors fruits">Orange</div>
-		  <div class="filterDiv cars">Volvo</div>
-		  <div class="filterDiv colors">Red</div>
-		  <div class="filterDiv cars animals">Mustang</div>
-		  <div class="filterDiv colors">Blue</div>
-		  <div class="filterDiv animals">Cat</div>
-		  <div class="filterDiv animals">Dog</div>
-		  <div class="filterDiv fruits">Melon</div>
-		  <div class="filterDiv fruits animals">Kiwi</div>
-		  <div class="filterDiv fruits">Banana</div>
-		  <div class="filterDiv fruits">Lemon</div>
-		  <div class="filterDiv animals">Cow</div>
+		  <div class="filterDiv movies">BMW</div>
+		  <div class="filterDiv music trips">Orange</div>
+		  <div class="filterDiv movies">Volvo</div>
+		  <div class="filterDiv music">Red</div>
+		  <div class="filterDiv movies books">Mustang</div>
+		  <div class="filterDiv music">Blue</div>
+		  <div class="filterDiv books">Cat</div>
+		  <div class="filterDiv books">Dog</div>
+		  <div class="filterDiv trips">Melon</div>
+		  <div class="filterDiv trips books">Kiwi</div>
+		  <div class="filterDiv trips">Banana</div>
+		  <div class="filterDiv trips">Lemon</div>
+		  <div class="filterDiv books">Cow</div>
 		</div>
 
 </div>
