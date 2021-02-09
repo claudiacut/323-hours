@@ -3,7 +3,7 @@
 
 
 function getItem(){
-    var max=4;
+    var max=3;
     var min=1;
     var index=Math.random() * (max - min) + min;
     index=index |0;
