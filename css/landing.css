@@ -10,7 +10,7 @@ main {
 body {
   margin: 0;
   background-color:#56cccf !important;
-  --cursor-stroke: #76fa5a;
+  --cursor-stroke: #E6E948;
   --cursor-fill: none;
   --cursor-stroke-width: 1px;
   -webkit-font-smoothing: antialiased;
